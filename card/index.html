@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="flip-card">
+          <div class="card"> 
+            <div id="cardPage1" class="card__face">
+                <div class="dflex">
+                    <img id="cardChip" src="credit-card-chip.jpg" alt="cardChip">
+                    <div class="CardType"><i class="fa fa-3x fa-cc-visa"></i></div>
+                </div>
+                <div id="cardNumber">
+                    <span>#</span>
+                    <span>#</span>
+                    <span>#</span>
+                    <span style="padding-right: 11px;">#</span>
+
+                    <span>#</span>
+                    <span>#</span>
+                    <span>#</span>
+                    <span style="padding-right: 11px;">#</span>
+
+                    <span>#</span>
+                    <span>#</span>
+                    <span>#</span>
+                    <span style="padding-right: 11px;">#</span>
+
+                    <span>#</span>
+                    <span>#</span>
+                    <span>#</span>
+                    <span>#</span>
+                </div>
+                <div class="dflex">
+                    <div id="cardName">
+                        <p>Card Holder</p>
+                        <p id="cardNameValue">AD SOYAD</p>
+                    </div>
+                    <div id="expires">
+                        <p>Expires</p>
+                        <p id="expiresDate">
+                            <span>MM</span>/<span>YY</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cardPage2" class="card__back">
+                <div id="blackDiv"></div>
+                <p>CVV</p>
+                <div id='cvvDiv' class="dflex pAbsolute"></div>
+                <div class="CardType pAbsolute"><i class="fa fa-3x fa-cc-visa"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <form id="infForm" class="dflex">
+            <label for="cardNumberInf">Card Number</label>
+            <input type="number" id="cardNumberInf" onpaste="return false">
+
+            <label for="cardNname">Card Name</label>
+            <input type="text" id="cardNameInf" onpaste="return false">
+
+            <div class="dflex">
+                <p>Expiration Date</p>
+                <label for="infCVV" onpaste="return false">CVV</label>
+            </div>
+
+            <div class="dflex" id="expirationDiv">
+                <select id='month-dropdown'>
+                    <option value="MM">Month</option>
+                </select>
+                <select id='year-dropdown'>
+                    <option value="YY">Year</option>
+                </select>
+
+                <input type="number" name="number" id="infCVV"></input>
+
+            </div>
+            <input type="submit" id="submit">
+        </form>
+
+
+        <script src="./script.js"></script>
+        <script src="https://use.fontawesome.com/d7561f126d.js"></script>
+
+    </main>
+</body>
+
+</html>

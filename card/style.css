@@ -1,0 +1,237 @@
+body {
+  background-color: #d4eafd;
+}
+
+main {
+  margin: 15% auto;
+  width: 450px;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pAbsolute {
+  position: absolute;
+}
+
+.boder {
+  border: 1px solid white;
+}
+
+#cardPage1,
+#cardPage2 {
+  z-index: 1;
+  top: -100px;
+  left: 60px;
+  width: 330px;
+  height: 220px;
+  color: white;
+  border-radius: 17px;
+  background-color: #1e2143;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#cardPage1:first-child div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+
+#cardPage1:first-child div #cardChip {
+  width: 50px;
+  height: 35px;
+  border-radius: 15px;
+}
+
+#cardPage1 #cardName p,
+#cardPage1 #expires p {
+  padding: 0;
+  margin: 0;
+}
+
+#cardPage1 #cardName,
+#cardPage1 #cardNumber {
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+#cardPage1 #expires {
+  border-radius: 5px;
+  width: 70px;
+}
+
+#cardPage1 #cardNumber {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#cardPage1 #cardName {
+  width: 250px;
+}
+
+#cardPage2 {
+  position: absolute;
+}
+
+#cardPage2 p {
+  text-align: end;
+  padding-right: 25px;
+}
+
+#cardPage2 .CardType {
+  top: 140px;
+  width: 270px;
+  text-align: end;
+  right: 16px;
+}
+
+#cardPage2 #cvvDiv {
+  width: 280px;
+  text-align: end;
+  background-color: white;
+  height: 30px;
+  top: 85px;
+  left: 25px;
+  color: black;
+  text-align: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#cardPage2 #blackDiv {
+  background-color: black;
+  width: 330px;
+  height: 35px;
+  margin-top: 15px;
+  top: 10px;
+}
+
+#cardPage2 form {
+  top: 65px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#cardPage2 form input {
+  border-radius: 3px;
+  height: 25px;
+}
+
+#infForm {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 120px 25px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#infForm div {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#infForm label,
+#infForm p {
+  font-size: 13px;
+  margin: 0;
+  padding-top: 15px;
+}
+
+#infForm #cardNumberInf,
+#infForm #cardNameInf {
+  height: 25px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#infForm #cardNumberInf:focus,
+#infForm #cardNameInf:focus {
+  -webkit-box-shadow: #0862e9e8 0px 3px 8px;
+          box-shadow: #0862e9e8 0px 3px 8px;
+}
+
+#infCVV,
+#infForm select {
+  width: 100px;
+  height: 25px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#infCVV:focus,
+#infForm select:focus {
+  -webkit-box-shadow: #0862e9e8 0px 3px 8px;
+          box-shadow: #0862e9e8 0px 3px 8px;
+}
+
+#submit {
+  height: 40px;
+  margin-top: 25px;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  background-color: #0055d4;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.CardType {
+  padding: 0 !important;
+}
+
+.flip-card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.reverce {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__face,
+.card__back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=style.css.map */

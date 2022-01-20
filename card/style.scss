@@ -1,0 +1,188 @@
+body {
+    background-color: #d4eafd;
+}
+
+main {
+    margin: 15% auto;
+    width: 450px;
+}
+.dflex {
+    display: flex;
+}
+
+.pAbsolute {
+    position: absolute;
+}
+.boder {
+    border: 1px solid white;
+}
+
+#cardPage1,
+#cardPage2 {
+    z-index: 1;
+    top: -100px;
+    left: 60px;
+    width: 330px;
+    height: 220px;
+    color: white;
+    border-radius: 17px;
+    background-color: #1e2143;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#cardPage1:first-child div {
+    justify-content: space-between;
+    padding: 15px;
+    #cardChip {
+        width: 50px;
+        height: 35px;
+        border-radius: 15px;
+    }
+}
+
+#cardPage1 {
+    #cardName p,
+    #expires p {
+        padding: 0;
+        margin: 0;
+    }
+    #cardName,
+    #cardNumber {
+        margin: 0 10px;
+        border-radius: 5px;
+    }
+    #expires{
+        border-radius: 5px;
+        width: 70px;
+    }
+    #cardNumber {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    #cardName {
+        width: 250px;
+    }
+}
+
+#cardPage2 {
+    position: absolute;
+    p {
+        text-align: end;
+        padding-right: 25px;
+    }
+    .CardType {
+        top: 140px;
+        width: 270px;
+        text-align: end;
+        right: 16px;
+    }
+    #cvvDiv {
+        width: 280px;
+        text-align: end;
+        background-color: white;
+        height: 30px;
+        top: 85px;
+        left: 25px;
+        color: black;
+        text-align: end;
+        justify-content: end;
+        align-items: center;
+    }
+    #blackDiv {
+        background-color: black;
+        width: 330px;
+        height: 35px;
+        margin-top: 15px;
+        top: 10px;
+    }
+    form {
+        top: 65px;
+        flex-direction: column;
+        input {
+            border-radius: 3px;
+            height: 25px;
+        }
+    }
+}
+
+#infForm {
+    flex-direction: column;
+    width: 450px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 120px 25px 25px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    div {
+        justify-content: space-between;
+    }
+    label,
+    p {
+        font-size: 13px;
+        margin: 0;
+        padding-top: 15px;
+    }
+    #cardNumberInf,
+    #cardNameInf {
+        height: 25px;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        &:focus {
+            box-shadow: #0862e9e8 0px 3px 8px;
+        }
+    }
+}
+
+#infCVV,
+#infForm select {
+    width: 100px;
+    height: 25px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &:focus {
+        box-shadow: #0862e9e8 0px 3px 8px;
+    }
+}
+#submit {
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    background-color: #0055d4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+
+.CardType {
+    padding: 0 !important;
+}
+// -----------Card animation--------------
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.reverce {
+    transform: rotateY(180deg);
+}
+
+.card__face,
+.card__back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+}
+
+// ----------------
